@@ -1,0 +1,1553 @@
+fileFormatVersion: 2
+guid: cc16c4925467495428255cf89b4723b1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: platformer_sprites_base_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 512
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7aae1f014e4a24cbf1b5385050fcae
+      internalID: -609432315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 512
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839320983a0b8b142869fb2ae97ce7a7
+      internalID: 16235015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 512
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc046ffd2c7f274a9dade4c18ab1424
+      internalID: -1368135806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 512
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20023479b15418c47b8a1c63c25ca027
+      internalID: -564530722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 512
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1dc87ec40a90bc46abad33522ebd289
+      internalID: -1185326034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_5
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 513
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c163ebc7b7d174f4abe5a9d95adece4c
+      internalID: 154039032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 512
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38dc71a9abcd0b14cabbbdc2c4335b40
+      internalID: 1655109917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_7
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 512
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588d96d534e670b4583793f9046ef04c
+      internalID: -1337693997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 448
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6ff8594fbdce1408e41c9cfbce6d6d
+      internalID: -1584681017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_9
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 448
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab6099ecd4f0e547af78b513186ecc6
+      internalID: -953721193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 49
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421d45792ee3e3a41a35b8848c8069a2
+      internalID: 2024789723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_11
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 448
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ff5a82cc532d745aac42b52bff96d1
+      internalID: -1068799037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_12
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 448
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85b53b508fdf044fac25aacd78c1eda
+      internalID: -521139327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_13
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 448
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9c224250224844083049b7cc1bd785
+      internalID: -1939355941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_14
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 448
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aaee872bd8eb5342a6523e242a9914f
+      internalID: 1287152221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_15
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 448
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be945cc49b6dd7544ac6f53ab3d4edce
+      internalID: 1640981001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 384
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe81224cbc85e0e49bade31c97cf707c
+      internalID: 1172541124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_17
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 384
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05123da083ecdc4c99becee052a6214
+      internalID: -968775677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_18
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 384
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d20d048d545a744bde6ccc9c6b8d0e
+      internalID: 278528711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 384
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb0f40bed97e4c4e8becdc4d65bb2a6
+      internalID: 343469463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_20
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 384
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef57dfb2bac90e645840b33cfdb61165
+      internalID: 1178366243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_21
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 384
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca6907c9d9ee0e4290b52e1fd089c57
+      internalID: 2024462273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_22
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 384
+        width: 48
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe300738b1f5eda4292ab94b9beb9804
+      internalID: -18050821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_23
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 384
+        width: 51
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9485a4967e8ef6840b9e560d66a80e7b
+      internalID: -381080268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_24
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 320
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eabfe1f535ad344481e249bb89ab7bf
+      internalID: 1169958224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_25
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 320
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a65d16378bb52499734d900f524b4e
+      internalID: 1999144503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_26
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 320
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1125f1cf65698745929f57f39f14d96
+      internalID: 1154170195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_27
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 320
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2685a6e8a69e84e459fd4c1142943146
+      internalID: 995824293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_28
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 320
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d6e37ffe74eae488a52a8aefa79c67
+      internalID: -859219362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_29
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 320
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f038775b748254c94fc40e95e54fbd
+      internalID: 1214031874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_30
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 320
+        width: 45
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7534468d0cac4524d82e315ceabb6c1c
+      internalID: -1437287404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_31
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 320
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92010e2ce16eac74db1e7437834d03f7
+      internalID: -1459821902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_32
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 256
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c34acc25a758143b795dbd96357170
+      internalID: 1963817989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_33
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 256
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cde470ab21317459d2bc5f9e88ad50
+      internalID: -1938566023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_34
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 256
+        width: 21
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1436bc5b7e58e42b5df867243f9521
+      internalID: -231923925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_35
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 256
+        width: 24
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286975a76d08dd24c9768a48836278d0
+      internalID: -1314658184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_36
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 256
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5511e614eb7831b439561fe1d311b013
+      internalID: -1565967411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_37
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 256
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273e5fd7e990f8f4ba6400103eadad16
+      internalID: -579874240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_38
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 256
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee7d0c768d7b0b40a61585423debd88
+      internalID: -1914040275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_39
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 256
+        width: 27
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a522fd9bc68904e8014e43c6cebef6
+      internalID: -1659651798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_40
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 192
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b3f73c61561374e8e91711bb307d06
+      internalID: -1580296138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_41
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 192
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cbdb321d003374591cac4003b6ea35
+      internalID: -725226913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_42
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 192
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6739d220e7d7a554db10fe06acdfe6c1
+      internalID: 458929235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_43
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 192
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c1009260d382d4880fdc2d7967ab86
+      internalID: 272269771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_44
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 192
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924b6c92a0538154d82ee8a2e43ead22
+      internalID: 1546489800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_45
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 193
+        width: 41
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979197032978dc44d8f97dad58388a0d
+      internalID: -1321527925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_46
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 194
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38110770493219143bcce7e75eb05073
+      internalID: 1316811825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_47
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 193
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f537d3d4e310f34a8669cbef9e974f9
+      internalID: -1348441113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_48
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 128
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913ef60a8754db84caca4e06ba1d91d2
+      internalID: -1083067366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_49
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 130
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c34ddf5b0a11a84a903ab71cb52a5ef
+      internalID: 106779410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_50
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 129
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f266341c3251b48a2ea3f59894253c
+      internalID: 1028848149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_51
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 128
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9490bcaa5c1fd654a85b1babe0280780
+      internalID: -1462452100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_52
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 128
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a165faec17c5bf459c785014b4d9e2d
+      internalID: -1850041043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_53
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 130
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca979440b5a2afb42941e12a63f512bb
+      internalID: -789069277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_54
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 128
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac93f7a0cfc0acb43b07424bd401be11
+      internalID: -242773796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_55
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 128
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf4d830708c3734ebb38203d3bd1f39
+      internalID: 937708380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_56
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 64
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5eedf4c4f692a4aaa49f38e54c1dab
+      internalID: 1958153824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_57
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 64
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74779978141e43b41a9a126aaea63843
+      internalID: -1453270019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_58
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ed0981c50199b4fb95787eb32635a8
+      internalID: 990447059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_59
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 64
+        width: 34
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1deab486c4017354a8aededbfa970f54
+      internalID: 753257732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_60
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 64
+        width: 34
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c16a83f986ae8f46840cace80736a0d
+      internalID: -1096818777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_61
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 33
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a84845fe377c24c8c0589e4d7b5f78
+      internalID: 1406673708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_62
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 64
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d797fda2e759cf74ea1896f246c17b76
+      internalID: 2145052597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_63
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 64
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe8a45c62c577d49b8c4dc65f02f920
+      internalID: -1713346034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_sprites_base_64
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 14
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2886e7e761159054399e27edeb445191
+      internalID: 1737050493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      platformer_sprites_base_0: -609432315
+      platformer_sprites_base_1: 16235015
+      platformer_sprites_base_10: 2024789723
+      platformer_sprites_base_11: -1068799037
+      platformer_sprites_base_12: -521139327
+      platformer_sprites_base_13: -1939355941
+      platformer_sprites_base_14: 1287152221
+      platformer_sprites_base_15: 1640981001
+      platformer_sprites_base_16: 1172541124
+      platformer_sprites_base_17: -968775677
+      platformer_sprites_base_18: 278528711
+      platformer_sprites_base_19: 343469463
+      platformer_sprites_base_2: -1368135806
+      platformer_sprites_base_20: 1178366243
+      platformer_sprites_base_21: 2024462273
+      platformer_sprites_base_22: -18050821
+      platformer_sprites_base_23: -381080268
+      platformer_sprites_base_24: 1169958224
+      platformer_sprites_base_25: 1999144503
+      platformer_sprites_base_26: 1154170195
+      platformer_sprites_base_27: 995824293
+      platformer_sprites_base_28: -859219362
+      platformer_sprites_base_29: 1214031874
+      platformer_sprites_base_3: -564530722
+      platformer_sprites_base_30: -1437287404
+      platformer_sprites_base_31: -1459821902
+      platformer_sprites_base_32: 1963817989
+      platformer_sprites_base_33: -1938566023
+      platformer_sprites_base_34: -231923925
+      platformer_sprites_base_35: -1314658184
+      platformer_sprites_base_36: -1565967411
+      platformer_sprites_base_37: -579874240
+      platformer_sprites_base_38: -1914040275
+      platformer_sprites_base_39: -1659651798
+      platformer_sprites_base_4: -1185326034
+      platformer_sprites_base_40: -1580296138
+      platformer_sprites_base_41: -725226913
+      platformer_sprites_base_42: 458929235
+      platformer_sprites_base_43: 272269771
+      platformer_sprites_base_44: 1546489800
+      platformer_sprites_base_45: -1321527925
+      platformer_sprites_base_46: 1316811825
+      platformer_sprites_base_47: -1348441113
+      platformer_sprites_base_48: -1083067366
+      platformer_sprites_base_49: 106779410
+      platformer_sprites_base_5: 154039032
+      platformer_sprites_base_50: 1028848149
+      platformer_sprites_base_51: -1462452100
+      platformer_sprites_base_52: -1850041043
+      platformer_sprites_base_53: -789069277
+      platformer_sprites_base_54: -242773796
+      platformer_sprites_base_55: 937708380
+      platformer_sprites_base_56: 1958153824
+      platformer_sprites_base_57: -1453270019
+      platformer_sprites_base_58: 990447059
+      platformer_sprites_base_59: 753257732
+      platformer_sprites_base_6: 1655109917
+      platformer_sprites_base_60: -1096818777
+      platformer_sprites_base_61: 1406673708
+      platformer_sprites_base_62: 2145052597
+      platformer_sprites_base_63: -1713346034
+      platformer_sprites_base_64: 1737050493
+      platformer_sprites_base_7: -1337693997
+      platformer_sprites_base_8: -1584681017
+      platformer_sprites_base_9: -953721193
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
