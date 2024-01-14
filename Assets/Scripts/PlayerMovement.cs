@@ -60,9 +60,19 @@ public class PlayerMovement : MonoBehaviour
             move = Vector2.zero;
         }
 
+        if (IsFacingRight() == false)
+        {
+            this.gameObject.transform.localScale = new Vector2(-0.5f, transform.localScale.y);
+        }
+        if (IsFacingRight() == true)
+        {
+            this.gameObject.transform.localScale = new Vector2(0.5f, transform.localScale.y);
+        }
+
         lastVelocity = rb.velocity;
 
         //Debug.Log(IsOnWall());
+        Debug.Log(IsFacingRight());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -91,13 +101,25 @@ public class PlayerMovement : MonoBehaviour
     private bool IsOnWall()
     {
         //detect if a wall is within range of the wall detection transform
-        if (Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer))
+        if (Physics2D.OverlapCircle(wallCheck.position, 0.05f, wallLayer))
         {
             return true;
         }
         else
         {
             return false;
+        }
+    }
+
+    private bool IsFacingRight()
+    {
+        if (Input.GetAxisRaw("Horizontal") < 0f)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
         }
     }
 }
