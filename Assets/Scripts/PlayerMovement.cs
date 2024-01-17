@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Animator animator;
+    private float lastDirectionMoved;
 
     public float speed;
     public float jumpForce;
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(0,rb.velocity.y * wallMaxSpeed);
         }
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -61,6 +63,11 @@ public class PlayerMovement : MonoBehaviour
             move = Vector2.zero;
         }
 
+        if (Input.GetAxisRaw("Horizontal") != 0f)
+        {
+            lastDirectionMoved = Input.GetAxisRaw("Horizontal");
+        }
+
         if (IsFacingRight() == false)
         {
             this.gameObject.transform.localScale = new Vector2(-0.5f, transform.localScale.y);
@@ -74,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Debug.Log(IsOnWall());
         //Debug.Log(IsFacingRight());
+        //Debug.Log(lastKeyDown);
 
         animator.SetFloat("Horizontal", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
     }
@@ -116,9 +124,13 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsFacingRight()
     {
-        if (Input.GetAxisRaw("Horizontal") < 0f)
+        if (lastDirectionMoved < 0)
         {
             return false;
+        }
+        if (lastDirectionMoved > 0)
+        {
+            return true;
         }
         else
         {
