@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
 
     public float speed;
     public float jumpForce;
@@ -72,7 +73,9 @@ public class PlayerMovement : MonoBehaviour
         lastVelocity = rb.velocity;
 
         //Debug.Log(IsOnWall());
-        Debug.Log(IsFacingRight());
+        //Debug.Log(IsFacingRight());
+
+        animator.SetFloat("Horizontal", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

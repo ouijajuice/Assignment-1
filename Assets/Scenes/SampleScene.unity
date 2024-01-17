@@ -649,12 +649,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6365f8b60c1cc43bcc50908e5e36d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1812358586}
   speed: 750
   jumpForce: 10
   maxSpeed: 8
   wallMaxSpeed: 0
   wallCheck: {fileID: 1244994428}
-  wallSlideSpeed: 8
+  wallSlideSpeed: 10
   wallLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -797,6 +798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812358584}
   - component: {fileID: 1812358585}
+  - component: {fileID: 1812358586}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -871,6 +873,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1812358586
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812358583}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 171e622d95372f54e86f5707a9437bc6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2041877027
 GameObject:
   m_ObjectHideFlags: 0
