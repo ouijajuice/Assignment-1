@@ -162,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsOnWall()
     {
         //detect if a wall is within range of the wall detection transform
-        if (Physics2D.OverlapCircle(wallCheck.position, 0.05f, wallLayer) && Mathf.Abs(horizontal) > 0f)
+        if (Physics2D.OverlapCircle(wallCheck.position, 0.05f, wallLayer))
         {
             animator.SetBool("animJumpUp", false);
             animator.SetBool("animFalling", false);
