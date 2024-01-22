@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float maxSpeed;
     public float wallMaxSpeed;
+    public float slideForce;
 
     private Vector2 lastVelocity;
     private bool isGrounded;
@@ -18,9 +19,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     public Transform wallCheck;
+    public Transform groundCheck;
     private bool onWall;
     public float wallSlideSpeed;
     public LayerMask wallLayer;
+    public LayerMask groundLayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(rb.velocity.x) < maxSpeed)
         {
             move = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
-            
         }
         
         //if not, ignore player input
@@ -68,6 +70,11 @@ public class PlayerMovement : MonoBehaviour
             lastDirectionMoved = Input.GetAxisRaw("Horizontal");
         }
 
+        if (Input.GetAxis("Fire1") > 0f && Input.GetAxisRaw("Horizontal") > 0f)
+        {
+            rb.AddForce(Vector2.right * slideForce, ForceMode2D.Impulse);
+        }
+
         if (IsFacingRight() == false)
         {
             this.gameObject.transform.localScale = new Vector2(-0.5f, transform.localScale.y);
@@ -76,6 +83,21 @@ public class PlayerMovement : MonoBehaviour
         {
             this.gameObject.transform.localScale = new Vector2(0.5f, transform.localScale.y);
         }
+
+        if (Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer))
+        {
+            isGrounded = true;
+        }
+
+        if (isGrounded == false && rb.velocity.y > 0f)
+        {
+            animator.SetBool("animJumpUp", true);
+        }
+        if (isGrounded == false && rb.velocity.y < 0f && IsOnWall() == false)
+        {
+            animator.SetBool("animFalling", true);
+        }
+
 
         lastVelocity = rb.velocity;
 
@@ -96,6 +118,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(lastVelocity.x, 0f);
 
             isGrounded = true;
+            animator.SetBool("animJumpUp", false);
+            animator.SetBool("animFalling", false);
         }
     }
 
@@ -112,12 +136,16 @@ public class PlayerMovement : MonoBehaviour
     private bool IsOnWall()
     {
         //detect if a wall is within range of the wall detection transform
-        if (Physics2D.OverlapCircle(wallCheck.position, 0.05f, wallLayer))
+        if (Physics2D.OverlapCircle(wallCheck.position, 0.05f, wallLayer) && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0f)
         {
+            animator.SetBool("animJumpUp", false);
+            animator.SetBool("animFalling", false);
+            animator.SetBool("animOnWall", true);
             return true;
         }
         else
         {
+            animator.SetBool("animOnWall", false);
             return false;
         }
     }
