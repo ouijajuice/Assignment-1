@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     public Animator animator;
     private float lastDirectionMoved;
+    private float slideCoolDown = 0f;
+    public float slideCoolDownDuration;
+    private bool isFacingRight = true;
+    private float horizontal;
 
     public float speed;
     public float jumpForce;
@@ -24,6 +28,14 @@ public class PlayerMovement : MonoBehaviour
     public float wallSlideSpeed;
     public LayerMask wallLayer;
     public LayerMask groundLayer;
+
+    private bool isWallJumping;
+    private float wallJumpingDirection;
+    private float wallJumpingTime = 0.2f;
+    private float wallJumpingCounter;
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower = new Vector2(20f, 20f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,18 +58,21 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        horizontal = Input.GetAxisRaw("Horizontal");
+
         //if space press and on ground and not on wall then add impulse up on rb
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true && IsOnWall() == false)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-        
+
         //if x velocity is less than the max speed then accept player input
         if (Mathf.Abs(rb.velocity.x) < maxSpeed)
         {
-            move = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
+            move = new Vector2(horizontal, 0f);
         }
         
+
         //if not, ignore player input
         //probably a better way to do this but it works
         else
@@ -65,24 +80,34 @@ public class PlayerMovement : MonoBehaviour
             move = Vector2.zero;
         }
 
-        if (Input.GetAxisRaw("Horizontal") != 0f)
+        if (horizontal != 0f)
         {
-            lastDirectionMoved = Input.GetAxisRaw("Horizontal");
+            lastDirectionMoved = horizontal;
         }
 
-        if (Input.GetAxis("Fire1") > 0f && Input.GetAxisRaw("Horizontal") > 0f)
+        if (slideCoolDown <= 0f)
         {
-            rb.AddForce(Vector2.right * slideForce, ForceMode2D.Impulse);
+            if (Input.GetAxis("Fire1") > 0f)
+            {
+                if (horizontal > 0f)
+                {
+                    rb.AddForce(Vector2.right * slideForce, ForceMode2D.Impulse);
+                    slideCoolDown = slideCoolDownDuration;
+                }
+                else if (horizontal < 0f)
+                {
+                    rb.AddForce(Vector2.left * slideForce, ForceMode2D.Impulse);
+                    slideCoolDown = slideCoolDownDuration;
+                }
+            }
+        }
+        else
+        {
+            slideCoolDown -= Time.deltaTime;
         }
 
-        if (IsFacingRight() == false)
-        {
-            this.gameObject.transform.localScale = new Vector2(-0.5f, transform.localScale.y);
-        }
-        if (IsFacingRight() == true)
-        {
-            this.gameObject.transform.localScale = new Vector2(0.5f, transform.localScale.y);
-        }
+        Flip();
+        
 
         if (Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer))
         {
@@ -98,6 +123,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("animFalling", true);
         }
 
+        WallJump();
 
         lastVelocity = rb.velocity;
 
@@ -105,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(IsFacingRight());
         //Debug.Log(lastKeyDown);
 
-        animator.SetFloat("Horizontal", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
+        animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -136,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsOnWall()
     {
         //detect if a wall is within range of the wall detection transform
-        if (Physics2D.OverlapCircle(wallCheck.position, 0.05f, wallLayer) && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0f)
+        if (Physics2D.OverlapCircle(wallCheck.position, 0.05f, wallLayer) && Mathf.Abs(horizontal) > 0f)
         {
             animator.SetBool("animJumpUp", false);
             animator.SetBool("animFalling", false);
@@ -150,19 +176,52 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private bool IsFacingRight()
+    private void WallJump()
     {
-        if (lastDirectionMoved < 0)
+        if (IsOnWall())
         {
-            return false;
-        }
-        if (lastDirectionMoved > 0)
-        {
-            return true;
+            isWallJumping = false;
+            wallJumpingDirection = -transform.localScale.x;
+            wallJumpingCounter = wallJumpingTime;
+
+            CancelInvoke(nameof(StopWallJumping));
         }
         else
         {
-            return true;
+            wallJumpingCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
+        {
+            isWallJumping = true;
+            rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            wallJumpingCounter = 0f;
+
+            if (transform.localScale.x != wallJumpingDirection)
+            {
+                isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
+
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+        }
+    }
+
+    private void StopWallJumping()
+    {
+        isWallJumping = false;
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
     }
 }
