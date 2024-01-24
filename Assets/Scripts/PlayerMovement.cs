@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject dashParticles;
+    private bool dashingBool;
+    public LayerMask shooterKillerLayer;
+    public GameObject shooterKillerPrefab;
+
     public Animator animator;
     private float lastDirectionMoved;
     private float slideCoolDown = 0f;
@@ -16,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float maxSpeed;
     public float wallMaxSpeed;
     public float slideForce;
+    public float dashingTime;
 
     private Vector2 lastVelocity;
     private bool isGrounded;
@@ -91,20 +97,45 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (horizontal > 0f)
                 {
+                    dashingBool = true;
                     rb.AddForce(Vector2.right * slideForce, ForceMode2D.Impulse);
+                    dashParticles.SetActive(true);
+                    rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                     slideCoolDown = slideCoolDownDuration;
+                    animator.SetBool("animDashing",true);
+                    
+                    Invoke("UnfreezeY", dashingTime);
+                    Invoke("DespawnParticles", 0.5f);
                 }
                 else if (horizontal < 0f)
                 {
+                    dashingBool = true;
                     rb.AddForce(Vector2.left * slideForce, ForceMode2D.Impulse);
+                    dashParticles.SetActive(true);
+                    rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                     slideCoolDown = slideCoolDownDuration;
+                    animator.SetBool("animDashing", true);
+                    
+                    Invoke("UnfreezeY", dashingTime);
+                    Invoke("DespawnParticles", 0.5f);
                 }
             }
         }
         else
         {
+            
             slideCoolDown -= Time.deltaTime;
+            animator.SetBool("animDashing", false);
         }
+        if (slideCoolDown > 2f)
+        {
+            dashingBool = true;
+        }
+        else 
+        { 
+            dashingBool = false; 
+        }
+
 
         Flip();
         
@@ -130,13 +161,14 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(IsOnWall());
         //Debug.Log(IsFacingRight());
         //Debug.Log(lastKeyDown);
-
+        Debug.Log(dashingBool);
+        //Debug.Log(slideCoolDown);
         animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //ground detection
+            //ground detection
         if (collision.gameObject.CompareTag("Ground"))
         {
             //this velocity line is so the player doesn't lose all momentum upon landing
@@ -146,6 +178,14 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             animator.SetBool("animJumpUp", false);
             animator.SetBool("animFalling", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Shooter") && dashingBool == true)
+        {
+            Instantiate(shooterKillerPrefab, transform.position, Quaternion.identity);
         }
     }
 
@@ -164,6 +204,8 @@ public class PlayerMovement : MonoBehaviour
         //detect if a wall is within range of the wall detection transform
         if (Physics2D.OverlapCircle(wallCheck.position, 0.05f, wallLayer))
         {
+            animator.SetFloat("Horizontal", 0f);
+            animator.SetBool("animDashing", false);
             animator.SetBool("animJumpUp", false);
             animator.SetBool("animFalling", false);
             animator.SetBool("animOnWall", true);
@@ -191,7 +233,7 @@ public class PlayerMovement : MonoBehaviour
             wallJumpingCounter -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
+        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f && horizontal == 0f)
         {
             isWallJumping = true;
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
@@ -212,6 +254,17 @@ public class PlayerMovement : MonoBehaviour
     private void StopWallJumping()
     {
         isWallJumping = false;
+    }
+
+    private void UnfreezeY()
+    {
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    private void DespawnParticles()
+    {
+        dashParticles.SetActive(false);
     }
 
     private void Flip()

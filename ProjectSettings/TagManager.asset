@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - StartTrigger
   - EndTrigger
+  - Enemy
+  - Shooter
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,9 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Shooter
   - 
   - 
   - 
